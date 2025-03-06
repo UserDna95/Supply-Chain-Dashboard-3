@@ -567,8 +567,6 @@ ORDER BY
     abc_classification, xyz_classification, annual_consumption_value DESC;
 
   ```
-![Screen Shot 2025-03-04 at 8 09 38 PM]()
-
 
 Step 4) 
 Dashboard in PowerBI
@@ -578,7 +576,10 @@ How to connect MYSQL to PowerBI
 
 2) Click on database on the left and input the MYSQL login information (root username) and connect the hostname and port name on the database name
 
-3) Load or transform data 
+3) Load or transform data
+
+![Screen Shot 2025-03-06 at 12 19 38 PM](https://github.com/UserDna95/Supply-Chain-Dashboard-3/blob/main/2025-03-06%20(3).png)
+
 
 
 Key Insights:
