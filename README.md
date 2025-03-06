@@ -1,18 +1,18 @@
 # Supply-Chain-Dashboard-3
 
 Problem Statement: 
-Use Kaggle set to explore and create a comprehensive supply chain dashboard. 
+Use Kaggle set to explore and create a comprehensive ain dashboard. 
 
-https://www.kaggle.com/datasets/talhabu/us-regional-sales-data
+https://om/datasets/talhabu/us-regional-sales-data
 
 Step 1) 
 Clean and index data in Excel:
 
-1) Trimmed order number to a whole number with no string values
+1) Trimmed order number to a whole number with no string/text values
 
-2) Transposed sales_channel values (in-store, online, distributor, and wholesale) from column to row in order to attach the warehouse information or store information with the correct sales_channel. So, in-store sales have a store_id, store_branch, and store_location, but a null or 0 value for warehouse related information. 
+2) Transpose sales_channel values (in-store, online, distributor, and wholesale) from column to row to attach the warehouse information or store information with the correct sales_channel. So, in-store sales have a store_id, store_branch, and store_location, but a null or 0 value for warehouse-related information. 
 
-3) Raw data dates did not follow logic where Procured Date, Order Date, Ship Date, Delivery Date are in order from oldest to newest dates. Using data validation and the randomizer function with DAX, I created new dates. 
+3) Raw data dates did not follow logic where Procured Date, Order Date, Ship Date, and Delivery Date are in order from oldest to newest dates. I created new dates using data validation and the randomizer function with DAX. 
 
 
   ```
@@ -39,7 +39,7 @@ Data validation
 
   ```
 
-4) Separated year and month from each date to do analysis by month and year separately using both
+4) Separated year and month from each date to analyze by month and year separately using both
 =year() 
 =month() and
 =TEXT(D2, "mm") or =TEXT(D2, "yyyy") 
@@ -48,7 +48,7 @@ Data validation
 
 6) Re-indexed order numbers 
 
-7) Change sales_team to a randomized list of names and attached an index as sales_team_id as a number from 1-15
+7) Change sales_team to a randomized list of names and attach an index as sales_team_id as a number from 1-15
 
 
   ```
@@ -58,9 +58,9 @@ Data validation
 8) Add in columns for sale_price (unit price – unit price* discount_applied)
 •	Add column for profit (sale_price – unit_cost (cogs)) 
 
-9) Added in a randomized number for holding cost with wholesale, distributor, online between 5-30, and store as 1-10
+9) Added a randomized number for holding cost with wholesale, distributor, online between 5-30, and store as 1-10
 
-10) Created warehouse_branch_code to a number that matches with a randomized location from a list (ie. 7338 is for Charlotte, NC)
+10) Created warehouse_branch_code to a number that matches with a randomized location from a list (ie, 7338 is for Charlotte, NC)
 
 
   ```
@@ -83,7 +83,7 @@ Data validation
 ![Screen Shot 2025-03-06 at 12 08 38 PM](https://github.com/UserDna95/Supply-Chain-Dashboard-3/blob/main/2025-03-06%20(1).png)
 
 Step 2)
-Upload csv file into MySQL and use data import wizard to insert values from csv file into table structures. The following shows the initial structure for the Orders table. 
+Upload CSV file into MySQL and use data import wizard to insert values from a csv file into table structures. The following shows the initial structure for the Orders table. 
 
   ```
 CREATE TABLE Orders (
@@ -120,7 +120,7 @@ CREATE TABLE Orders (
 Step 3)
 Create SQL queries to create and understand the KPI's of the overall supply chain data. 
 
-A simple SQL query aggregates data such as finding out which sales channel is most profitable? 
+A simple SQL query aggregates data, such as finding out which sales channel is most profitable. 
 
   ```
 SELECT 
@@ -139,9 +139,9 @@ ORDER BY
 
   ```
 
-More complex queries looked at salesteam performance, product demand, and price elasticity to name a few.
+More complex queries looked at sales team performance, product demand, and price elasticity, to name a few.
   
-Which salesteam is offering the most discount and providing a positive net_profit (this can help create strategies for other teams and to help assess which products are being discounted the most and why)
+Which sales team is offering the most discount and providing a positive net profit (this can help create strategies for other teams and to help assess which products are being discounted the most and why)
 
   ```
 SELECT 
