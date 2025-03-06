@@ -5,19 +5,6 @@ Use Kaggle set to explore and create a comprehensive supply chain dashboard.
 
 https://www.kaggle.com/datasets/talhabu/us-regional-sales-data
 
-
-Supplier]------<supplies>------[Product]------<stored in>------[Warehouse]
-                                    |                                   |
-                                    |                                   |
-                                    |                                 [Shipment]------<from>------[Warehouse]
-                                    |                                  /
-                                  [Order]------<includes>------[Product]
-                                    |                                  \
-                                    |                                   [Store]------<ships>------[Shipment]
-                                    |
-                                 [Customer]------<places>------[Order]
-
-
 Step 1) 
 Clean and index data in Excel:
 
