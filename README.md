@@ -3,7 +3,7 @@
 Problem Statement: 
 Use Kaggle set to explore and create a comprehensive ain dashboard. 
 
-https://om/datasets/talhabu/us-regional-sales-data
+https://www.kaggle.com/datasets/talhabu/us-regional-sales-data
 
 Step 1) 
 Clean and index data in Excel:
