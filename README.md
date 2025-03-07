@@ -64,8 +64,6 @@ Data validation
 
   ```
 =INDEX({"Austin, TX", "Charlotte, NC", "Chicago, IL", "Columbus, OH", "Dallas, TX", "Denver, CO", "Fort Worth, TX", "Houston, TX", "Indianapolis, IN", "Jacksonville, FL", "Los Angeles, CA", "New York, NY", "Philadelphia, PA", "Phoenix, AZ", "San Antonio, TX", "San Diego, CA", "San Francisco, CA", "San Jose, CA", "Seattle, WA", "Washington, D.C."}, RANDBETWEEN(1, 20))
-
-
   ```
 
 11) Indexed product_id, payment_type, and customer_gender. Along with warehouse_code, store_id, product_id, and salesteam_id. 
@@ -76,7 +74,6 @@ Data validation
 =INDEX({"Cash","Credit Card","Ewallet"}, RANDBETWEEN(1, 3))
 
 =INDEX({"Male","Female"}, RANDBETWEEN(1, 2))
-
   ```
 
 ![Screen Shot 2025-03-06 at 12 08 38 PM](https://github.com/UserDna95/Supply-Chain-Dashboard-3/blob/main/2025-03-06%20(1).png)
@@ -135,7 +132,6 @@ GROUP BY
     sales_channel
 ORDER BY 
     total_profit DESC;
-
   ```
 
 More complex queries looked at sales team performance, product demand, and price elasticity, to name a few.
@@ -162,10 +158,10 @@ GROUP BY
     st.salesteam_name
 ORDER BY 
     net_profit DESC;
-
   ```
 
 Economic order quantity (EOQ) determines the optimal order quantity that minimizes total inventory costs, including holding and ordering costs.
+
   ```
 SELECT 
     p.product_type, 
@@ -202,7 +198,6 @@ FROM
         o.product_id = p.product_id
     GROUP BY 
         p.product_type) AS product_data;
-
   ```
 
 Safety stock is the extra inventory held to mitigate the risk of stock outs due to demand and lead time variability.
@@ -229,7 +224,6 @@ SELECT
     1.65 * SQRT((stddev_lead_time ^ 2 * avg_daily_demand ^ 2) + (stddev_daily_demand ^ 2 * avg_lead_time_days ^ 2)) AS safety_stock
 FROM 
     DemandLeadTimeStats;
-
   ```
 
 Reorder Point (ROP) indicates the inventory level at which a new order should be placed to avoid stock outs.
@@ -259,10 +253,9 @@ SELECT
     (1.65 * SQRT((stddev_lead_time ^ 2 * avg_daily_demand ^ 2) + (stddev_daily_demand ^ 2 * avg_lead_time_days ^ 2))) AS reorder_point
 FROM 
     DemandLeadTimeStats;
-
   ```
 
-Inventory turnover ratio measures how often inventory is sold and replaced over a period.
+The inventory turnover ratio measures how often inventory is sold and replaced over a period.
 
   ```
 WITH cogs_data AS (
@@ -285,7 +278,6 @@ SELECT
     cogs / NULLIF(total_order_quantity, 0) AS inventory_turnover_ratio
 FROM 
     cogs_data;
-
   ```
 
 Cost of goods (COGS)
@@ -302,7 +294,6 @@ ON
     o.product_id = p.product_id
 GROUP BY 
     p.product_type;
-
   ```
 
 Gross income/gross margin percentage
@@ -348,7 +339,6 @@ JOIN
     cogs_data AS c
 ON 
     r.product_type = c.product_type;
-
   ```
 Demand by product category.
 
@@ -364,7 +354,6 @@ ON
     o.product_id = p.product_id
 GROUP BY 
     p.product_type;
-
   ```
 
 Moving average demand is a method used to smooth out fluctuations in data, making it easier to identify trends. The following SQL query calculates the moving average demand for products over the past three months.
@@ -392,10 +381,9 @@ GROUP BY
     p.product_type, o.order_date_year, o.order_date_month
 ORDER BY 
     p.product_type, o.order_date_year, o.order_date_month;
-
   ```
 
-Forecasted demand uses historical data to forecast the demand of a product in the near future. 
+Forecasted demand uses historical data to forecast the demand of a product shortly. 
 
   ```
 WITH monthly_demand AS (
@@ -442,11 +430,9 @@ GROUP BY
     product_type
 ORDER BY 
     product_type;
-
-
   ```
 
-Demand Elasticity analyzes how changes in price affect the quantity demanded (price elasticity of demand).
+Demand Elasticity analyzes how price changes affect the quantity demanded (price elasticity of demand).
 
   ```
 SELECT 
@@ -469,7 +455,6 @@ FROM
         o.product_id = p.product_id) AS price_data
 GROUP BY 
     product_type;
-
   ```
 
 ABC/XYZ analysis categorizes products on predictability and variability. Ideally, we want high predictability in the sales of a product with low variability.  
@@ -564,7 +549,6 @@ FROM
     CombinedStats
 ORDER BY
     abc_classification, xyz_classification, annual_consumption_value DESC;
-
   ```
 
 Step 4) 
