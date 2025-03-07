@@ -1,7 +1,7 @@
 # Supply-Chain-Dashboard-3
 
 Problem Statement: 
-Use Kaggle set to explore and create a comprehensive ain dashboard. 
+Use Kaggle set to explore and create a comprehensive supply chain dashboard. 
 
 https://www.kaggle.com/datasets/talhabu/us-regional-sales-data
 
@@ -10,9 +10,9 @@ Clean and index data in Excel:
 
 1) Trimmed order number to a whole number with no string/text values
 
-2) Transpose sales_channel values (in-store, online, distributor, and wholesale) from column to row to attach the warehouse information or store information with the correct sales_channel. So, in-store sales have a store_id, store_branch, and store_location, but a null or 0 value for warehouse-related information. 
+2) Transpose sales_channel values (in-store, online, distributor, and wholesale) from column to row to attach the warehouse or store information with the correct sales_channel. So, in-store sales have a store_id, store_branch, and store_location, but a null or 0 value for warehouse-related information. 
 
-3) Raw data dates did not follow logic where Procured Date, Order Date, Ship Date, and Delivery Date are in order from oldest to newest dates. I created new dates using data validation and the rand() function with DAX. 
+3) The Raw data dates did not follow logic, where Procured Date, Order Date, Ship Date, and Delivery Date are in order from oldest to newest. I created new dates using data validation and the rand() function with DAX. 
 
 
   ```
