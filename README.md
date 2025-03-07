@@ -561,8 +561,7 @@ How to connect MYSQL to PowerBI
 
 3) Load or transform data
 
-4)
-There are seven pages in the .pbix file, with the first pages looking at the Sales numbers
+4) There are seven pages in the .pbix file, with the first pages looking at the Sales numbers
 ![Screen Shot 2025-03-07 at 1 05 38 AM](https://github.com/UserDna95/Supply-Chain-Dashboard-3/blob/main/2025-03-07%20(2).png)
 
 The second page looks at SalesTeam numbers
@@ -582,6 +581,3 @@ The sixth page looks at financial numbers such as COGS and Gross Income
 
 The seventh page looks at Forecasting numbers 
 ![Screen Shot 2025-03-07 at 1 05 38 AM](https://github.com/UserDna95/Supply-Chain-Dashboard-3/blob/main/2025-03-07%20(9).png)
-
-
-Key Insights:
