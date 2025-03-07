@@ -12,7 +12,7 @@ Clean and index data in Excel:
 
 2) Transpose sales_channel values (in-store, online, distributor, and wholesale) from column to row to attach the warehouse information or store information with the correct sales_channel. So, in-store sales have a store_id, store_branch, and store_location, but a null or 0 value for warehouse-related information. 
 
-3) Raw data dates did not follow logic where Procured Date, Order Date, Ship Date, and Delivery Date are in order from oldest to newest dates. I created new dates using data validation and the randomizer function with DAX. 
+3) Raw data dates did not follow logic where Procured Date, Order Date, Ship Date, and Delivery Date are in order from oldest to newest dates. I created new dates using data validation and the rand() function with DAX. 
 
 
   ```
