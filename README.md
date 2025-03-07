@@ -561,13 +561,27 @@ How to connect MYSQL to PowerBI
 
 3) Load or transform data
 
-![Screen Shot 2025-03-06 at 12 19 38 PM](https://github.com/UserDna95/Supply-Chain-Dashboard-3/blob/main/2025-03-06%20(3).png)
+4)
+There are seven pages in the .pbix file, with the first pages looking at the Sales numbers
+![Screen Shot 2025-03-07 at 1 05 38 AM](https://github.com/UserDna95/Supply-Chain-Dashboard-3/blob/main/2025-03-07%20(2).png)
 
+The second page looks at SalesTeam numbers
+![Screen Shot 2025-03-07 at 1 05 38 AM](https://github.com/UserDna95/Supply-Chain-Dashboard-3/blob/main/2025-03-07%20(3).png)
+
+The third page looks at Inventory numbers
+![Screen Shot 2025-03-07 at 1 05 38 AM](https://github.com/UserDna95/Supply-Chain-Dashboard-3/blob/main/2025-03-07%20(4).png)
+
+The fourth page looks at the numbers in regards to Product Demand
+![Screen Shot 2025-03-07 at 1 05 38 AM](https://github.com/UserDna95/Supply-Chain-Dashboard-3/blob/main/2025-03-07%20(5).png)
+
+The fifth page looks at Order date numbers 
+![Screen Shot 2025-03-07 at 1 05 38 AM](https://github.com/UserDna95/Supply-Chain-Dashboard-3/blob/main/2025-03-07%20(7).png)
+
+The sixth page looks at financial numbers such as COGS and Gross Income
+![Screen Shot 2025-03-07 at 1 05 38 AM](https://github.com/UserDna95/Supply-Chain-Dashboard-3/blob/main/2025-03-07%20(8).png)
+
+The seventh page looks at Forecasting numbers 
+![Screen Shot 2025-03-07 at 1 05 38 AM](https://github.com/UserDna95/Supply-Chain-Dashboard-3/blob/main/2025-03-07%20(9).png)
 
 
 Key Insights:
-
-
-
-![Screen Shot 2025-03-05 at 8 09 38 PM]()
-![Screen Shot 2025-03-05 at 8 09 38 PM]()
