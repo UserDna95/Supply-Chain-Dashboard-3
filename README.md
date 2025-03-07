@@ -55,8 +55,7 @@ Data validation
 =INDEX({"Team Alpha","Team Beta","Team Omega","Team Charlie","Team Dynamo","Team Phoenix","Team Pinnacle","Team Titan","Team Velocity","Team Echo","Team Mayhem","Team Synergy","Team Invictus","Team Delta","Team Bravo"}, RANDBETWEEN(1, 15))
   ```
 
-8) Add in columns for sale_price (unit price – unit price* discount_applied)
-•	Add column for profit (sale_price – unit_cost (cogs)) 
+8) Add in columns for sale_price (unit price – unit price* discount_applied) & Add column for profit (sale_price – unit_cost (cogs)) 
 
 9) Added a randomized number for holding cost with wholesale, distributor, online between 5-30, and store as 1-10
 
